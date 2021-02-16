@@ -136,7 +136,7 @@ function asteroids() {
     var asteroid = createSprite(Math.round(random(50,1350)),-20);
     asteroid.velocityY = (6 + score/10);
     asteroid.lifetime = 200;
-    asteroid.scale = 0.1;
+    asteroid.scale = 0.5;
 
     var rand = Math.round(random(1,3));
     switch(rand) {
