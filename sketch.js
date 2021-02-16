@@ -40,7 +40,7 @@ function setup() {
   p2.visible = false;
   
   asteroidGroup = new Group;
-  asteroidGroup.setColliderEach("rectangle", 100, 50)
+  asteroidGroup.setColliderEach("circle", 0, 0, 100)
   laserGroup = new Group;
   
   endline = createSprite(250,700,500,5);
@@ -141,11 +141,14 @@ function asteroids() {
     var rand = Math.round(random(1,3));
     switch(rand) {
       case 1: asteroid.addImage(asteroid2);
-      asteroid.setCollider("rectangle", 0, 0, 200,100);
+      asteroid.setCollider("circle", 0, 0, 100);
               break;
       case 2: asteroid.addImage(asteroid3);
-      asteroid.setCollider("rectangle", 0, 0, 200,100);
-      default: break;
+      asteroid.setCollider("circle", 0, 0, 100);
+             break;
+      case 3: asteroid.addImage(asteroid2);
+      asteroid.setCollider("circle", 0, 0, 100);
+        default:break;
     }
     asteroidGroup.add(asteroid);
   }
